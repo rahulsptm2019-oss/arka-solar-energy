@@ -34,7 +34,7 @@ export default function ContactForm() {
             <div className="mt-8 space-y-5 text-slate-700">
               <p>
                 <strong>Phone:</strong>{" "}
-                <a href="tel:+919179064611" className="text-blue-700">
+                <a href="tel:+91917906461166" className="text-blue-700">
                   +91 91790 64611
                 </a>
               </p>
