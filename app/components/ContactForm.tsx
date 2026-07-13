@@ -35,7 +35,7 @@ export default function ContactForm() {
               <p>
                 <strong>Phone:</strong>{" "}
                 <a href="tel:+91917906461166" className="text-blue-700">
-                  +91 91790 64611
+                  +91 91790 6461166
                 </a>
               </p>
 
