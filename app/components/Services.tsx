@@ -1,9 +1,9 @@
 import {
+  ArrowRight,
   Building2,
+  CheckCircle2,
   Factory,
   House,
-  ArrowRight,
-  CheckCircle2,
 } from "lucide-react";
 
 const services = [
@@ -11,7 +11,7 @@ const services = [
     icon: House,
     title: "Residential Solar",
     description:
-      "Customized rooftop solar systems for homeowners who want lower electricity bills and long-term savings.",
+      "Customized rooftop solar systems for homeowners who want lower electricity bills and reliable energy.",
     features: [
       "Subsidy assistance",
       "Loan and EMI options",
@@ -37,45 +37,47 @@ const services = [
     features: [
       "Detailed technical assessment",
       "Scalable solar solutions",
-      "Professional project execution",
+      "Professional installation",
     ],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white px-6 py-24">
+    <section
+      id="services"
+      className="scroll-mt-24 bg-white px-6 py-24"
+    >
       <div className="mx-auto max-w-7xl">
-        <div className="text-center">
-          <p className="font-semibold uppercase tracking-widest text-blue-700">
+        <div className="mx-auto mb-14 max-w-3xl text-center">
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.25em] text-blue-700">
             Our Services
           </p>
 
-          <h2 className="mt-4 text-4xl font-bold text-slate-900 sm:text-5xl">
-            Solar solutions for every requirement
+          <h2 className="text-4xl font-bold tracking-tight text-slate-950 md:text-5xl">
+            Complete Solar Solutions
           </h2>
 
-          <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
-            From initial consultation to installation and after-sales support,
-            Arka Solar Energy provides complete solar solutions across Aligarh
-            and nearby areas.
+          <p className="mt-5 text-lg leading-8 text-slate-600">
+            Professional solar services for homes, businesses and industries
+            across Aligarh and nearby areas.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
               <article
                 key={service.title}
-                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-2 hover:border-blue-200 hover:shadow-2xl"
+                className="flex h-full flex-col rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-100 text-blue-800 transition group-hover:bg-blue-800 group-hover:text-white">
+                <div className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-lg shadow-blue-700/20">
                   <Icon className="h-8 w-8" />
                 </div>
 
-                <h3 className="mt-7 text-2xl font-bold text-slate-900">
+                <h3 className="text-2xl font-bold text-slate-950">
                   {service.title}
                 </h3>
 
@@ -83,7 +85,7 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <ul className="mt-6 space-y-3">
+                <ul className="mt-6 space-y-4">
                   {service.features.map((feature) => (
                     <li
                       key={feature}
@@ -95,13 +97,15 @@ export default function Services() {
                   ))}
                 </ul>
 
-                <a
-                  href="#contact"
-                  className="mt-8 inline-flex items-center gap-2 font-bold text-blue-800 transition group-hover:gap-3"
-                >
-                  Request consultation
-                  <ArrowRight className="h-5 w-5" />
-                </a>
+                <div className="mt-auto pt-8">
+                  <a
+                    href="#contact"
+                    className="inline-flex items-center gap-2 font-bold text-blue-800 transition hover:gap-3 hover:text-blue-600"
+                  >
+                    Request consultation
+                    <ArrowRight className="h-5 w-5" />
+                  </a>
+                </div>
               </article>
             );
           })}
